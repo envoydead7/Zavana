@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zavana by Natural Shine - Funding Pitch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css">
+    <!-- Chosen Palette: Earthy Harmony -->
+    <!-- Application Structure Plan: The SPA is designed as a single-page narrative that guides the user (investor) from the high-level market opportunity to the specifics of the investment. It uses a top navigation for quick access to key sections. The structure prioritizes persuasion by first establishing a clear problem/market fit, then presenting the solution, and culminating in an interactive dashboard that details the financial ask and its direct impact. This flow is more engaging than a linear slide deck and allows investors to explore the core financial data interactively, which is crucial for a funding pitch. -->
+    <!-- Visualization & Content Choices: 
+    - Investment Breakdown: Report Info (Machine cost table) -> Goal (Organize/Inform) -> Viz (Donut Chart) -> Interaction (Hover for details) -> Justification (Clearly shows allocation of the whole fund) -> Library (Chart.js).
+    - Impact Metrics: Report Info (Production, Margin, Revenue stats) -> Goal (Inform/Wow Factor) -> Viz (Animated number counters) -> Interaction (Animates on scroll) -> Justification (Makes growth projections feel dynamic and impactful) -> Library/Method (Custom JS with IntersectionObserver).
+    - Growth Plan: Report Info (3-phase plan) -> Goal (Show change over time) -> Viz (Horizontal Timeline) -> Interaction (Hover to highlight) -> Justification (Intuitive representation of a phased strategy) -> Library/Method (HTML/Tailwind CSS).
+    CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+     <script src="/index.js"></script>
+    
+  </head>
+  <body class="antialiased">
+    <header
+      id="header"
+      class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-xl font-bold text-[#252422]">
+          Zavana <span class="text-[#6B705C]">by Natural Shine</span>
+        </a>
+        <div class="hidden md:flex space-x-6">
+          <a href="#opportunity" class="nav-link">Opportunity</a>
+          <a href="#products" class="nav-link">Products</a>
+          <a href="#investment" class="nav-link">Investment</a>
+          <a href="#impact" class="nav-link">Impact</a>
+          <a href="#roadmap" class="nav-link">Roadmap</a>
+          <a href="#founder" class="nav-link">Founder</a>
+        </div>
+        <a
+          href="#contact"
+          class="hidden md:inline-block bg-[#6B705C] text-white px-4 py-2 rounded-lg hover:bg-[#585c4e] transition-colors"
+          >Contact</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="py-20 md:py-24">
+        <div class="container mx-auto px-6 text-center">
+          <h1
+            class="text-4xl md:text-6xl font-bold text-[#252422] leading-tight"
+          >
+            Purely Herbal. Naturally You.
+          </h1>
+          <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            A funding pitch to scale Zavana, our handcrafted herbal shampoo,
+            from a beloved home kitchen brand to a market leader in natural
+            personal care.
+          </p>
+          <div class="mt-12">
+            <img
+              src="./assets/ProductMockup1.png"
+              alt="Zavana Herbal Shampoo Bottles"
+              class="mx-auto rounded-lg shadow-2xl max-w-lg w-full"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="opportunity" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#252422]">
+              The Market is Ready for a Natural Shift
+            </h2>
+            <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
+              This section outlines the clear market demand for natural personal
+              care products. We highlight the problems with current mass-market
+              options and present the significant consumer trend that creates a
+              perfect entry point for Zavana.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8 items-center">
+            <div class="bg-[#F5F5F4] p-6 rounded-lg shadow-sm">
+              <h3 class="font-bold text-xl mb-2 text-[#b5838d]">The Problem</h3>
+              <p class="text-sm text-gray-700">
+                <strong class="text-[#252422]">Chemical Overload:</strong>
+                Consumers are wary of harsh sulfates, parabens, and silicones.
+              </p>
+              <p class="mt-2 text-sm text-gray-700">
+                <strong class="text-[#252422]">Ineffective Solutions:</strong>
+                One-size-fits-all products fail to address specific hair
+                concerns.
+              </p>
+            </div>
+            <div class="text-center">
+              <div
+                class="bg-gradient-to-br from-[#A8DADC] to-[#457B9D] p-8 rounded-full shadow-xl text-white"
+              >
+                <span class="block text-6xl font-bold">68%</span>
+                <span class="block mt-2 text-lg"
+                  >of Indian consumers prefer natural ingredients.</span
+                >
+              </div>
+            </div>
+            <div class="bg-[#F5F5F4] p-6 rounded-lg shadow-sm">
+              <h3 class="font-bold text-xl mb-2 text-[#6B705C]">
+                Our Solution: Zavana
+              </h3>
+              <p class="text-sm text-gray-700">
+                <strong class="text-[#252422]">100% Herbal Actives:</strong>
+                Gentle, potent ingredients like Amla, Reetha, and Shikakai.
+              </p>
+              <p class="mt-2 text-sm text-gray-700">
+                <strong class="text-[#252422]">Targeted Formulations:</strong>
+                Specialized variants for real hair concerns.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#252422]">Our Signature Product Lineup</h2>
+                    <p class="mt-3 text-gray-600 max-w-2xl mx-auto">We offer a range of specialized herbal formulations, each crafted to address a unique hair concern using potent, natural ingredients. Our products are the core of our brand, built on efficacy and trust.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product 1: Volume & Shine -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <img src="/assets/ProductMockup1.png" alt="Zavana Volume & Shine Shampoo" class="mx-auto rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-[#252422]">Herbal Care</h3>
+                        <p class="text-sm text-gray-600 mt-2">Infused with Amla and Hibiscus to naturally boost volume and enhance hair's natural luster.</p>
+                        <p class="text-2xl font-bold text-[#457B9D] my-4">₹350/400ml</p>
+                        <button class="w-full bg-[#6B705C] text-white py-3 rounded-lg hover:bg-[#585c4e] transition-colors font-semibold">Shop Now</button>
+                    </div>
+
+                    <!-- Product 2: Anti-Dandruff -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <img src="assets/ProductMockup2.png" alt="Zavana Anti-Dandruff Shampoo" class="mx-auto rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-[#252422]">Anti-Dandruff</h3>
+                        <p class="text-sm text-gray-600 mt-2">Formulated with Neem and Tea Tree Oil to combat flakes and soothe the scalp without harsh chemicals.</p>
+                        <p class="text-2xl font-bold text-[#457B9D] my-4">₹375/400ml</p>
+                        <button class="w-full bg-[#6B705C] text-white py-3 rounded-lg hover:bg-[#585c4e] transition-colors font-semibold">Shop Now</button>
+                    </div>
+
+                    <!-- Product 3: Hair Fall Control -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <img src="assets/SingleProduct.png" alt="Zavana Nourishment & Shine Shampoo" class="mx-auto rounded-xl mb-4">
+                        <h3 class="text-xl font-bold text-[#252422]">Nourishment & Shine</h3>
+                        <p class="text-sm text-gray-600 mt-2">Strengthens roots with the power of Bhringraj and Brahmi, reducing hair fall and promoting thicker hair.</p>
+                        <p class="text-2xl font-bold text-[#457B9D] my-4">₹360/400ml</p>
+                        <button class="w-full bg-[#6B705C] text-white py-3 rounded-lg hover:bg-[#585c4e] transition-colors font-semibold">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <section id="investment" class="py-16">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#252422]">
+              Building the Foundation for Growth
+            </h2>
+            <p class="mt-3 text-gray-600 max-w-3xl mx-auto">
+              To meet demand, we need to scale. This section provides a
+              transparent breakdown of our ₹5 Lakhs funding request. The
+              interactive chart shows exactly how these funds will be allocated
+              for essential machinery, establishing a robust small-scale
+              production unit.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="chart-container">
+              <canvas id="investmentChart"></canvas>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-4">
+                Investment Allocation: ₹4,50,000
+              </h3>
+              <ul id="investment-legend" class="space-y-3"></ul>
+              <p class="mt-4 text-sm text-gray-500 italic">
+                *A contingency of ₹50,000 is reserved for installation,
+                transport, and unforeseen expenses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="impact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#252422]">
+              Tangible Returns & Projected Growth
+            </h2>
+            <p class="mt-3 text-gray-600 max-w-3xl mx-auto">
+              Your investment directly translates into measurable growth. Here,
+              we visualize the powerful impact of this funding on our production
+              capacity, profit margins, and first-year revenue projections,
+              demonstrating a clear path to profitability.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="bg-[#F5F5F4] p-8 rounded-lg shadow-sm">
+              <h4 class="text-lg font-semibold text-gray-500">
+                Production Boost
+              </h4>
+              <p class="text-5xl font-bold text-[#457B9D] my-2">
+                <span data-target="23">1</span>x
+              </p>
+              <p class="text-gray-600">From 50 bottles per month to over 400 bottles per day.</p>
+            </div>
+            <div class="bg-[#F5F5F4] p-8 rounded-lg shadow-sm">
+              <h4 class="text-lg font-semibold text-gray-500">
+                Improved Margins
+              </h4>
+              <p class="text-5xl font-bold text-[#6B705C] my-2">
+                <span data-target="25">0</span>%
+              </p>
+              <p class="text-gray-600">
+                Cost-per-unit reduction from efficiency.
+              </p>
+            </div>
+            <div class="bg-[#F5F5F4] p-8 rounded-lg shadow-sm">
+              <h4 class="text-lg font-semibold text-gray-500">
+                Projected Y1 Revenue
+              </h4>
+              <p class="text-5xl font-bold text-[#b5838d] my-2">
+                ₹<span data-target="25">0</span>L
+              </p>
+              <p class="text-gray-600">
+                Achievable in the first year post-funding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" class="py-16">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#252422]">
+              Our Vision for the Future
+            </h2>
+            <p class="mt-3 text-gray-600 max-w-3xl mx-auto">
+              We have a clear, staged plan for sustainable growth. This
+              interactive timeline illustrates our vision, from consolidating
+              the local market with this initial funding to expanding our
+              product line and eventually reaching national customers.
+            </p>
+          </div>
+          <div class="relative max-w-2xl mx-auto">
+            <div class="timeline-path"></div>
+            <div class="space-y-12">
+              <div class="timeline-item relative pl-8">
+                <h4 class="font-bold text-xl text-[#457B9D]">
+                  Phase 1: Scale & Capture (With Funding)
+                </h4>
+                <p class="text-gray-600">
+                  Automate production, increase capacity, and establish a strong
+                  foothold in the local market through retail and salon
+                  partnerships.
+                </p>
+              </div>
+              <div class="timeline-item relative pl-8">
+                <h4 class="font-bold text-xl text-[#6B705C]">
+                  Phase 2: Product Diversification (1-2 Years)
+                </h4>
+                <p class="text-gray-600">
+                  Introduce complementary products like herbal conditioners,
+                  hair oils, and face washes to increase customer lifetime
+                  value.
+                </p>
+              </div>
+              <div class="timeline-item relative pl-8">
+                <h4 class="font-bold text-xl text-[#b5838d]">
+                  Phase 3: National Expansion (3-5 Years)
+                </h4>
+                <p class="text-gray-600">
+                  Expand reach to regional and national markets through
+                  strategic e-commerce platforms and retail partnerships.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="founder" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#252422]">
+            Meet the Founder
+          </h2>
+          <div class="mt-8 max-w-xl mx-auto">
+            <img
+              src="/assets/Logo.png"
+              alt="Zavana Logo"
+              class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg"
+            />
+            <h3 class="text-2xl font-semibold">Zainab Abbas</h3>
+            <p class="mt-4 text-gray-600">
+              A lifelong advocate for natural wellness and herbal remedies. With
+              years spent researching and perfecting the Zavana formulations,
+              they possess a deep understanding of the target customer and are
+              committed to building a brand based on trust, quality, and
+              authenticity.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="bg-[#252422] text-white">
+      <div class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-3xl font-bold">
+          Let's build a naturally successful future together.
+        </h2>
+        <p class="mt-4">
+          For inquiries and investment opportunities, please get in touch.
+        </p>
+        <div class="mt-6">
+          <p><strong>Email: </strong>mustafaabbas0912@gmail.com</p>
+          <p><strong>Contact No: </strong>+91 7869555598 </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
